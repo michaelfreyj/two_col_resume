@@ -1,0 +1,67 @@
+\documentclass[12pt,letterpaper,notitlepage,oneside,pagesize]{article}
+\usepackage{multicol}
+\usepackage{graphicx}    % extended graphics package.
+\usepackage{color}
+\usepackage[ps2pdf]{thumbpdf}
+\usepackage[left=0.5 in,top=0.5in,right=0.5 in,bottom=0.5in]{geometry}
+\usepackage{etoolbox}
+\usepackage{ifthen}
+\usepackage{multicol}
+\usepackage{vwcol}
+
+
+\newcommand\skill[2]{
+    \listadd\skilz{#1 \ifthenelse{\equal{#2}{}}{}{{\\
+    \hspace*{1em}{\em#2}}}}}
+
+
+\newcommand\summaryname{Summary}
+\newenvironment{summary}{%
+        \small
+        \begin{center}%
+         {\bfseries \summaryname\vspace{-.5em}\vspace{1ex}}%
+        \end{center}%
+        \quotation
+}
+
+\newcounter{itemcount}
+\newenvironment{body}{
+\begin{vwcol}[widths={0.3,0.7}]
+\begin{list}{$\cdot$}{\leftmargin=1em}
+\itemsep -0.5em \vspace{-0.5em}
+\forlistloop{\stepcounter{itemcount}\item}{\skilz}
+\end{list}
+\finishthispage
+\quotaion
+\end{vwcol}}
+
+
+\date{29. March 2020}
+\author{Michael~Frey}
+\title{tester}
+
+\skill{CFD}{OpenFOAM}
+\skill{CAD}{FreeCAD, Siemens NX, PTC CREO}
+\skill{Linux}{}
+\skill{Programming}{Python, C++, Matlab}
+
+
+\begin{document}
+\maketitle
+
+\begin{summary}
+So theres a little thing going on and im not really sure that my resume is
+going to make the cut on this one. Looks like we're just going to have to keep
+writing.
+\end{summary}
+
+
+\begin{body}
+
+Heres the second column 
+\end{body}
+
+
+
+
+\end{document}

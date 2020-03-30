@@ -1,0 +1,56 @@
+%\documentclass{resumeMF}
+\documentclass{article}
+\usepackage{etoolbox}
+
+%\usepackage[left=0.5 in,top=0.5in,right=0.5 in,bottom=0.5in]{geometry}
+\usepackage{geometry}
+\geometry{left=0.5 in,top=0.5in,right=0.5 in,bottom=0.5in}
+
+% \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+% \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+% \name{Michael J. Frey} % Your name
+% \address{179 Summer St, APT \#1, Amherst MA, 01002}
+% \address{(781) 879-4169 \\ mjfrey@umas.edu} 
+
+\newcommand\summaryname{Summary}
+\newenvironment{summary}{%
+        \small
+        \begin{center}%
+         {\bfseries \summaryname\vspace{-.5em}\vspace{1ex}}%
+        \end{center}%
+        \quotation
+}
+
+\newenvironment{body}{
+\begin{vwcol}[width={0.3,0.7}]
+
+
+\end{vwcol}
+
+% Put \vfill\null after the last line to break.
+% And then put \columnbreak after \vfill\null.
+
+\end{vwcol}
+%\BeforeBeginEnvironment{summary}{\newgeometry{left=5cm,right=5cm,top=5cm,bottom=5cm}}
+%\AfterEndEnvironment{summary}{\restoregeometry}
+
+
+
+\begin{document}
+
+\begin{summary}
+I am well-versed in good communication, solving problems, and thinking
+analytically, as demonstrated by my experience and projects. I am passionate
+about internal combustion engines and have a growing interest in aerospace
+propulsion systems, specifically in fluid flow involving combustion.
+\end{summary}
+
+
+here is some other stuff I just want to see how this indent works for a quick minute so do you want to show me that candaaaaayyy?
+
+
+
+
+
+
+\end{document}
